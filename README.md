@@ -1,2 +1,14 @@
 # M5StampS3EchoTest
 This program performs a loopback test on the RXD and TXD of the M5 Stamp S3. It conducts the loopback test using USB serial communication for RXD (G44) and TXD (G43).
+
+When you encounter the 'Failed uploading: uploading error: exit status 2' message while programming the Stamp S3, it is usually because the baud rate set in Serial.begin is not 115200. 
+In such cases, hold down the S3 button while inserting the USB cable. 
+Once the serial port is recognized, the device will be in programmable mode, and you can release the button. 
+After successfully programming, unplug and replug the USB cable to restart the S3.
+
+
+M5 Stamp S3 のRXDとTXDのループバックテストを行うプログラムです。USBシリアル経由でRXD(G44)とTXD(G43)のループバックテストを行います。
+Stamp S3にプログラムを書き込むときに、'Failed uploading: uploading error: exit status 2' と出る場合は、Serial.begin のボーレート設定が115200になっていないときです。
+このような場合は、S3のボタンを押しながらUSBケーブルを刺してください。
+こうしてシリアルポートが認識された後は、プログラム書き込み可能モードらなっているので、ボタンから手を放しても大丈夫です。
+無事にプログラムが書き込めた後は、USBケーブルを抜き差しして、S3を再起動してください。
